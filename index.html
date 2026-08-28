@@ -8,11 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --dark-bg: #12100E;
-            --sand-light: #F4EBE1;
-            --amber-warm: #E08E45;
-            --gold-muted: #D4AF37;
-            --terracotta: #C85A3A;
+            --bg-main: #FAF7F2;
+            --bg-warm: #F5F0E8;
+            --bg-light: #FBF9F5;
+            --brown-dark: #5C3D2E;
+            --brown-medium: #6B4A37;
+            --brown-light: #7A5A47;
+            --gold-warm: #C9A961;
+            --gold-bright: #D4B896;
+            --text-primary: #5C3D2E;
+            --text-secondary: #5C3D2E;
+            --cream: #F8F4ED;
+            --accent: #8B5A3C;
         }
 
         * {
@@ -23,29 +30,99 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--sand-light);
+            background: linear-gradient(135deg, #FAF7F2 0%, #F5EFE7 50%, #F0E8DC 100%);
+            color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
+            color: #5C3D2E;
         }
 
-        /* Glassmorphism */
+        p, span, a, li, div {
+            color: var(--text-secondary);
+        }
+
+        /* Переопределение tailwind цветов - белый на коричневый */
+        .text-white {
+            color: #8B6F57 !important;
+        }
+
+        /* Переопределение gray цветов на коричневый */
+        .text-gray-300 {
+            color: #8B6F57 !important;
+        }
+
+        .text-gray-400 {
+            color: #6B4A37 !important;
+        }
+
+        .text-gray-500 {
+            color: #5C3D2E !important;
+        }
+
+        .text-gray-600 {
+            color: #5C3D2E !important;
+        }
+
+        /* Переопределение yellow на коричневый */
+        .text-yellow-300 {
+            color: #A0854D !important;
+        }
+
+        .text-yellow-400 {
+            color: #8B6F47 !important;
+        }
+
+        .text-yellow-500 {
+            color: #8B6F47 !important;
+        }
+
+        /* Background цвета */
+        .bg-white {
+            background-color: #E8DCC8 !important;
+        }
+
+        .bg-gray-300 {
+            background-color: #D4B896 !important;
+        }
+
+        .bg-gray-400 {
+            background-color: #B8956A !important;
+        }
+
+        .bg-yellow-50 {
+            background-color: #F0E8DC !important;
+        }
+
+        .bg-yellow-100 {
+            background-color: #E8DCC8 !important;
+        }
+
+        /* Border цвета */
+        .border-gray-400 {
+            border-color: #8B6F47 !important;
+        }
+
+        .border-yellow-600 {
+            border-color: #8B6F47 !important;
+        }
+
+        /* Glassmorphism с теплыми тонами */
         .glass {
-            background: rgba(244, 235, 225, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(244, 235, 225, 0.12);
+            background: rgba(139, 90, 60, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(201, 169, 97, 0.15);
         }
 
         .glass-dark {
-            background: rgba(18, 16, 14, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(224, 142, 69, 0.1);
+            background: rgba(139, 90, 60, 0.12);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(201, 169, 97, 0.12);
         }
 
         /* Плавный скролл */
@@ -60,29 +137,29 @@
 
         @keyframes pulseAmber {
             0%, 100% {
-                box-shadow: 0 0 0 0 rgba(224, 142, 69, 0.7);
+                box-shadow: 0 0 0 0 rgba(201, 169, 97, 0.7);
             }
             50% {
-                box-shadow: 0 0 0 20px rgba(224, 142, 69, 0);
+                box-shadow: 0 0 0 20px rgba(201, 169, 97, 0);
             }
         }
 
         /* Мягкие тени */
         .shadow-soft {
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 40px rgba(107, 68, 35, 0.12);
         }
 
         .shadow-glow {
-            box-shadow: 0 0 40px rgba(224, 142, 69, 0.15);
+            box-shadow: 0 0 60px rgba(201, 169, 97, 0.2);
         }
 
-        /* Градиенты */
+        /* Премиум градиенты */
         .gradient-amber {
-            background: linear-gradient(135deg, var(--amber-warm), var(--gold-muted));
+            background: linear-gradient(135deg, #6B4423 0%, #8B5A3C 100%);
         }
 
         .gradient-dark {
-            background: linear-gradient(135deg, #1a1815, #2a2420);
+            background: linear-gradient(135deg, #7A5433 0%, #9B6B47 100%);
         }
 
         /* Аккордеон */
@@ -107,39 +184,53 @@
 
         .card-hover:hover {
             transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(107, 68, 35, 0.15);
         }
 
-        /* Кнопки */
+        /* Кнопки премиум с анимацией */
         .btn-primary {
-            background: linear-gradient(135deg, var(--amber-warm), var(--gold-muted));
-            color: var(--dark-bg);
+            background: linear-gradient(135deg, #704A38 0%, #8B5A47 100%);
+            color: #D4B896;
             font-weight: 600;
             padding: 14px 32px;
             border-radius: 12px;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(224, 142, 69, 0.25);
+            box-shadow: 0 8px 24px rgba(112, 74, 56, 0.3);
+            animation: softFloat 3s ease-in-out infinite;
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(224, 142, 69, 0.35);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(112, 74, 56, 0.3);
+        }
+
+        /* Анимация мягкого плавающего движения */
+        @keyframes softFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
         }
 
         .btn-secondary {
-            background: rgba(244, 235, 225, 0.1);
-            color: var(--sand-light);
-            border: 1px solid var(--amber-warm);
+            background: rgba(112, 74, 56, 0.08);
+            color: var(--text-secondary);
+            border: 1.5px solid var(--gold-warm);
             font-weight: 600;
             padding: 14px 32px;
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
+            animation: softFloat 3.2s ease-in-out infinite;
         }
 
         .btn-secondary:hover {
-            background: rgba(224, 142, 69, 0.1);
+            background: rgba(112, 74, 56, 0.15);
+            border-color: #D4B896;
         }
 
         /* Хедер фиксированный */
@@ -148,10 +239,10 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(18, 16, 14, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(224, 142, 69, 0.1);
+            background: rgba(250, 247, 242, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 169, 97, 0.15);
         }
 
         /* Модальное окно */
@@ -163,8 +254,8 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
+            background-color: rgba(74, 55, 40, 0.6);
+            backdrop-filter: blur(6px);
         }
 
         .modal.active {
@@ -174,10 +265,10 @@
         }
 
         .modal-content {
-            background: var(--dark-bg);
+            background: linear-gradient(135deg, #F5EFE7 0%, #FAF7F2 100%);
             padding: 40px;
             border-radius: 20px;
-            border: 1px solid rgba(224, 142, 69, 0.2);
+            border: 1px solid rgba(201, 169, 97, 0.2);
             max-width: 500px;
             width: 90%;
             animation: slideUp 0.3s ease;
@@ -219,7 +310,7 @@
 
         /* Кейс карточки */
         .case-card {
-            border-left: 4px solid var(--amber-warm);
+            border-left: 4px solid var(--gold-warm);
         }
 
         /* Иконки эмодзи с фоном */
@@ -229,7 +320,8 @@
             justify-content: center;
             width: 56px;
             height: 56px;
-            background: rgba(224, 142, 69, 0.15);
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.15), rgba(212, 184, 150, 0.1));
+            border: 1px solid rgba(201, 169, 97, 0.2);
             border-radius: 16px;
             font-size: 28px;
             margin-bottom: 12px;
@@ -243,18 +335,18 @@
         /* Статус бейдж */
         .status-badge {
             display: inline-block;
-            background: rgba(200, 90, 58, 0.2);
-            border: 1px solid var(--terracotta);
+            background: rgba(107, 68, 35, 0.12);
+            border: 1px solid var(--gold-warm);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 13px;
-            color: #FFB89F;
+            color: var(--text-secondary);
         }
 
         /* Counter animation */
         .counter-text {
             font-weight: 700;
-            color: var(--gold-muted);
+            color: #8B5A3C;
         }
 
         /* Адаптивность видео плейхолдера */
@@ -272,6 +364,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border-radius: 16px;
         }
 
         /* Play button */
@@ -281,12 +374,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--amber-warm);
+            background: linear-gradient(135deg, #704A38 0%, #8B5A47 100%);
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
             border: none;
-            color: var(--dark-bg);
+            color: #D4B896;
         }
 
         .play-btn:hover {
@@ -299,8 +392,9 @@
             margin-left: 4px;
         }
 
-        /* Desktop vs Mobile */
-        @media (max-width: 768px) {
+        .emoji-number {
+            filter: brightness(0) saturate(100%) invert(75%) sepia(60%) hue-rotate(12deg);
+        }
             .modal-content {
                 padding: 24px;
             }
@@ -326,7 +420,7 @@
     <header class="glass">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
+                <div class="text-2xl font-bold" style="color: #5C3D2E;">
                     ◇ ЭКСПЕДИЦИЯ ВНУТРЬ СЕБЯ
                 </div>
             </div>
@@ -352,15 +446,15 @@
             <!-- Надзаголовок -->
             <div class="text-center mb-8 fade-in">
                 <div class="inline-block bg-amber-900/20 border border-amber-600/40 rounded-full px-6 py-2 mb-6">
-                    <p class="text-amber-300 text-sm font-semibold tracking-wide uppercase">
+                    <p class="text-sm font-semibold tracking-wide uppercase" style="color: #5C3D2E;">
                         ⭐ Метод, который спас более 20 млн семей в мире, теперь адаптирован под культуру и быт российских семей.
                     </p>
                 </div>
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-sand-light">
-                    О чем молчат на кухне: как вернуть тепло в семью, если вы давно живёте как соседи
+                    О чём молчат в семье: как вернуть тепло и близость в семью, которая давно живёт как соседи
                 </h1>
                 <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                    Пошаговый антикризисный навигатор для пар, которые устали от холода, обид и пустых разговоров, но хотят сохранить свой дом
+                    Пошаговый навигатор для пар, которые устали от холода, обид и пустых претензий, и хотят возобновить те отношения, которые были в самом начале совместного пути
                 </p>
             </div>
 
@@ -427,7 +521,7 @@
                         </p>
                     </div>
                     <div class="mt-6 pt-6 border-t border-amber-600/20">
-                        <p class="text-amber-300 italic font-cormorant text-lg">
+                        <p class="italic font-cormorant text-lg" style="color: #5C3D2E;">
                             «Я пустое место. Всё, что я делаю для него он не ценит»
                         </p>
                     </div>
@@ -456,7 +550,7 @@
                         </p>
                     </div>
                     <div class="mt-6 pt-6 border-t border-amber-600/20">
-                        <p class="text-amber-300 italic font-cormorant text-lg">
+                        <p class="italic font-cormorant text-lg" style="color: #5C3D2E;">
                             «Сколько бы я для неё ни делал — ей вечно мало»
                         </p>
                     </div>
@@ -466,7 +560,7 @@
             <!-- Вывод -->
             <div class="glass rounded-3xl p-8 md:p-12 border-l-4 border-gold-muted bg-gradient-to-r from-amber-900/10 to-transparent">
                 <h3 class="text-2xl md:text-3xl font-bold mb-4 text-sand-light">Правда, которая не видна</h3>
-                <p class="text-lg text-gray-200 italic font-cormorant mb-4">
+                <p class="text-lg italic font-cormorant mb-4" style="color: #5C3D2E;">
                     «Любовь не ушла. Вы просто пытаетесь дать своему партнёру то, что ему / ей совсем не нужно.»
                 </p>
                 <p class="text-gray-300">
@@ -815,35 +909,35 @@
                 <h3 class="text-2xl font-bold text-sand-light mb-8">Каждый модуль — это инструмент</h3>
                 <div class="space-y-6">
                     <div class="flex gap-4">
-                        <div class="text-3xl flex-shrink-0">1️⃣</div>
+                        <div class="text-3xl flex-shrink-0 emoji-number">1️⃣</div>
                         <div>
                             <h4 class="font-bold text-sand-light mb-2">Экспресс-тест: узнайте язык друг друга</h4>
                             <p class="text-gray-300">Этот тест показывает, какая потребность доминирует. Можно пройти вместе или каждому отдельно.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="text-3xl flex-shrink-0">2️⃣</div>
+                        <div class="text-3xl flex-shrink-0 emoji-number">2️⃣</div>
                         <div>
                             <h4 class="font-bold text-sand-light mb-2">Атлас фраз: выучите язык любви</h4>
                             <p class="text-gray-300">На каждый день недели — 3–4 фразы, которые точно сработают. С объяснением, почему именно эта фраза гасит конфликт.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="text-3xl flex-shrink-0">3️⃣</div>
+                        <div class="text-3xl flex-shrink-0 emoji-number">3️⃣</div>
                         <div>
                             <h4 class="font-bold text-sand-light mb-2">Переводчик: понимайте реальную боль</h4>
                             <p class="text-gray-300">«Ты меня не слушаешь» = мне не хватает Внимания. «Ты ничего не делаешь» = мне нужна Забота действием.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="text-3xl flex-shrink-0">4️⃣</div>
+                        <div class="text-3xl flex-shrink-0 emoji-number">4️⃣</div>
                         <div>
                             <h4 class="font-bold text-sand-light mb-2">Протокол перемирия: 7 дней изменений</h4>
                             <p class="text-gray-300">Каждый вечер (10 минут) — точный шаг, который вызывает сдвиг. За неделю вы вернётесь к разговорам.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="text-3xl flex-shrink-0">5️⃣</div>
+                        <div class="text-3xl flex-shrink-0 emoji-number">5️⃣</div>
                         <div>
                             <h4 class="font-bold text-sand-light mb-2">Бонус: как говорить с детьми и родителями</h4>
                             <p class="text-gray-300">5 базовых потребностей работают и с подростками, и с пожилыми родителями. Специальный модуль для семьи.</p>
