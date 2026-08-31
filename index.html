@@ -8,18 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #FAF7F2;
-            --bg-warm: #F5F0E8;
-            --bg-light: #FBF9F5;
-            --brown-dark: #5C3D2E;
-            --brown-medium: #6B4A37;
-            --brown-light: #7A5A47;
-            --gold-warm: #C9A961;
-            --gold-bright: #D4B896;
-            --text-primary: #5C3D2E;
-            --text-secondary: #5C3D2E;
-            --cream: #F8F4ED;
-            --accent: #8B5A3C;
+            --bg-main: #0A0A0A;
+            --bg-warm: #1A1A1A;
+            --bg-light: #0F0F0F;
+            --brown-dark: #FFFFFF;
+            --brown-medium: #E8E8E8;
+            --brown-light: #FFFFFF;
+            --gold-warm: #D4AF37;
+            --gold-bright: #F4E4B9;
+            --text-primary: #FFFFFF;
+            --text-secondary: #FFFFFF;
+            --cream: #2A2A2A;
+            --accent: #D4AF37;
         }
 
         * {
@@ -30,15 +30,19 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #FAF7F2 0%, #F5EFE7 50%, #F0E8DC 100%);
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0F0F0F 100%);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         h1, h2, h3 {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4E4B9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-family: 'Playfair Display', serif;
-            color: #5C3D2E;
+            
         }
 
         p, span, a, li, div {
@@ -47,24 +51,24 @@
 
         /* Переопределение tailwind цветов - белый на коричневый */
         .text-white {
-            color: #8B6F57 !important;
+            color: #FFFFFF !important;
         }
 
         /* Переопределение gray цветов на коричневый */
-        .text-gray-300 {
-            color: #8B6F57 !important;
+        .text-gray-200 {
+            color: #FFFFFF !important;
         }
 
         .text-gray-400 {
-            color: #6B4A37 !important;
+            color: #E8E8E8 !important;
         }
 
         .text-gray-500 {
-            color: #5C3D2E !important;
+            color: #FFFFFF !important;
         }
 
         .text-gray-600 {
-            color: #5C3D2E !important;
+            color: #FFFFFF !important;
         }
 
         /* Переопределение yellow на коричневый */
@@ -94,7 +98,7 @@
         }
 
         .bg-yellow-50 {
-            background-color: #F0E8DC !important;
+            background-color: #0F0F0F !important;
         }
 
         .bg-yellow-100 {
@@ -112,14 +116,14 @@
 
         /* Glassmorphism с теплыми тонами */
         .glass {
-            background: rgba(139, 90, 60, 0.08);
+            background: rgba(212, 175, 55, 0.08);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(201, 169, 97, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .glass-dark {
-            background: rgba(139, 90, 60, 0.12);
+            background: rgba(212, 175, 55, 0.12);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border: 1px solid rgba(201, 169, 97, 0.12);
@@ -217,7 +221,7 @@
         }
 
         .btn-secondary {
-            background: rgba(112, 74, 56, 0.08);
+            background: rgba(212, 175, 55, 0.08);
             color: var(--text-secondary);
             border: 1.5px solid var(--gold-warm);
             font-weight: 600;
@@ -229,7 +233,7 @@
         }
 
         .btn-secondary:hover {
-            background: rgba(112, 74, 56, 0.15);
+            background: rgba(212, 175, 55, 0.15);
             border-color: #D4B896;
         }
 
@@ -265,7 +269,7 @@
         }
 
         .modal-content {
-            background: linear-gradient(135deg, #F5EFE7 0%, #FAF7F2 100%);
+            background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
             padding: 40px;
             border-radius: 20px;
             border: 1px solid rgba(201, 169, 97, 0.2);
@@ -420,13 +424,13 @@
     <header class="glass">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="text-2xl font-bold" style="color: #5C3D2E;">
+                <div class="text-2xl font-bold" style="color: #FFFFFF;">
                     ◇ ЭКСПЕДИЦИЯ ВНУТРЬ СЕБЯ
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-4">
                 <div class="status-badge">
-                    ⏳ Осталось <span class="counter-text">4</span> из 15 мест
+                    ★ Осталось <span class="counter-text">4</span> из 15 мест
                 </div>
                 <a href="#pricing" class="btn-primary text-sm">Получить доступ</a>
             </div>
@@ -434,7 +438,7 @@
         </div>
         <div id="mobileMenu" class="hidden md:hidden bg-gradient-dark border-t border-amber-900/30 p-4">
             <div class="status-badge block mb-3 w-full text-center">
-                ⏳ Осталось <span class="counter-text">4</span> из 15 мест
+                ★ Осталось <span class="counter-text">4</span> из 15 мест
             </div>
             <a href="#pricing" class="btn-primary block text-center w-full text-sm">Получить доступ</a>
         </div>
@@ -445,15 +449,15 @@
         <div class="max-w-5xl mx-auto">
             <!-- Надзаголовок -->
             <div class="text-center mb-8 fade-in">
-                <div class="inline-block bg-amber-900/20 border border-amber-600/40 rounded-full px-6 py-2 mb-6">
-                    <p class="text-sm font-semibold tracking-wide uppercase" style="color: #5C3D2E;">
+                <div class="inline-block bg-gray-900/20 border border-amber-500/40 rounded-full px-6 py-2 mb-6">
+                    <p class="text-sm font-semibold tracking-wide uppercase" style="color: #FFFFFF;">
                         ⭐ Метод, который спас более 20 млн семей в мире, теперь адаптирован под культуру и быт российских семей.
                     </p>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-sand-light">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
                     О чём молчат в семье: как вернуть тепло и близость в семью, которая давно живёт как соседи
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
                     Пошаговый навигатор для пар, которые устали от холода, обид и пустых претензий, и хотят возобновить те отношения, которые были в самом начале совместного пути
                 </p>
             </div>
@@ -474,7 +478,7 @@
                 </div>
                 <div class="text-center mt-4">
                     <p class="text-gray-400 text-sm flex items-center justify-center gap-2">
-                        <span>📹 Видео-разбор от автора</span>
+                        <span>▶ Видео-разбор от автора</span>
                         <span class="text-amber-400">•</span>
                         <span>7 минут, которые изменят ваш вечер</span>
                     </p>
@@ -493,16 +497,16 @@
     <!-- БЛОК ЭМПАТИИ -->
     <section id="empathy" class="py-20 px-4 bg-gradient-dark/50">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-sand-light">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-white">
                 Два взгляда в одну темноту
             </h2>
 
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <!-- Карточка Женщины -->
                 <div class="glass rounded-3xl p-8 card-hover shadow-soft">
-                    <div class="emoji-badge">👩</div>
-                    <h3 class="text-2xl font-bold mb-4 text-sand-light">Её история</h3>
-                    <div class="space-y-3 text-gray-300 text-sm md:text-base">
+                    <div class="emoji-badge">◇</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Её история</h3>
+                    <div class="space-y-3 text-gray-200 text-sm md:text-base">
                         <p class="flex items-start gap-3">
                             <span class="text-amber-400 flex-shrink-0">✦</span>
                             <span>Сварила борщ по рецепту его мамы — остыл на столе</span>
@@ -520,8 +524,8 @@
                             <span>Спальня — это холодный лед уже два года</span>
                         </p>
                     </div>
-                    <div class="mt-6 pt-6 border-t border-amber-600/20">
-                        <p class="italic font-cormorant text-lg" style="color: #5C3D2E;">
+                    <div class="mt-6 pt-6 border-t border-amber-500/20">
+                        <p class="italic font-cormorant text-lg" style="color: #FFFFFF;">
                             «Я пустое место. Всё, что я делаю для него он не ценит»
                         </p>
                     </div>
@@ -529,9 +533,9 @@
 
                 <!-- Карточка Мужчины -->
                 <div class="glass rounded-3xl p-8 card-hover shadow-soft">
-                    <div class="emoji-badge">👨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-sand-light">Его история</h3>
-                    <div class="space-y-3 text-gray-300 text-sm md:text-base">
+                    <div class="emoji-badge">◆</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Его история</h3>
+                    <div class="space-y-3 text-gray-200 text-sm md:text-base">
                         <p class="flex items-start gap-3">
                             <span class="text-amber-400 flex-shrink-0">✦</span>
                             <span>Ипотека, кредиты, работа без выходных</span>
@@ -549,8 +553,8 @@
                             <span>Спальня — это место ледяного молчания</span>
                         </p>
                     </div>
-                    <div class="mt-6 pt-6 border-t border-amber-600/20">
-                        <p class="italic font-cormorant text-lg" style="color: #5C3D2E;">
+                    <div class="mt-6 pt-6 border-t border-amber-500/20">
+                        <p class="italic font-cormorant text-lg" style="color: #FFFFFF;">
                             «Сколько бы я для неё ни делал — ей вечно мало»
                         </p>
                     </div>
@@ -559,11 +563,11 @@
 
             <!-- Вывод -->
             <div class="glass rounded-3xl p-8 md:p-12 border-l-4 border-gold-muted bg-gradient-to-r from-amber-900/10 to-transparent">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-sand-light">Правда, которая не видна</h3>
-                <p class="text-lg italic font-cormorant mb-4" style="color: #5C3D2E;">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">Правда, которая не видна</h3>
+                <p class="text-lg italic font-cormorant mb-4" style="color: #FFFFFF;">
                     «Любовь не ушла. Вы просто пытаетесь дать своему партнёру то, что ему / ей совсем не нужно.»
                 </p>
-                <p class="text-gray-300">
+                <p class="text-gray-200">
                     Вы разговариваете на разных языках, даёте не то, что ему / ей нужно, а то, что <strong>вам кажется</strong> он/она хочет. Он дарит ей подарки и даёт стабильность, когда ей не хватает его искреннего взгляда и тёплых разговоров. Она критикует его работу, а ему хочется услышать «Спасибо, ты молодец, я вижу всё, что ты делаешь для семьи».
                 </p>
             </div>
@@ -573,48 +577,48 @@
     <!-- АТЛАС 5 БАЗОВЫХ ПОТРЕБНОСТЕЙ -->
     <section id="atlas" class="py-20 px-4">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 text-sand-light">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 text-white">
                 🗺️ Атлас 5 базовых потребностей
             </h2>
             
             <div class="glass rounded-3xl p-8 md:p-10 mb-16 border-l-4 border-gold-muted">
-                <p class="text-gray-300 mb-4 leading-relaxed">
+                <p class="text-gray-200 mb-4 leading-relaxed">
                     Каждая базовая потребность — это то, что наполняет человека подлинным душевным теплом и спокойствием. Когда этот внутренний сосуд годами пуст, человек не становится черствым специально: он просто высыхает, закрывается в себе, начинает придираться к мелочам или вспыхивать от любой мелочи.
                 </p>
 
-                <p class="text-gray-300 mb-6 italic">
+                <p class="text-gray-200 mb-6 italic">
                     Это похоже на попытку поливать домашние цветы ароматным горячим кофе: «Но мне же так нравится этот кофе! Почему тогда цветы от него вянут?».
                 </p>
 
-                <p class="text-gray-300 mb-6 leading-relaxed">
+                <p class="text-gray-200 mb-6 leading-relaxed">
                     В семье все устроено точно так же. Мы искренне отдаем партнеру то, от чего тепло нам самим, но бьем мимо его базового дефицита:
                 </p>
 
                 <div class="space-y-4 mb-6">
                     <div class="bg-gradient-dark/50 rounded-xl p-4 border-l-2 border-amber-400">
-                        <p class="text-gray-300 text-sm">
-                            <strong class="text-sand-light">Пример 1:</strong> Если мужу после тяжелого дня хочется тихих и долгих разговоров на кухне глаза в глаза, это не значит, что жена наполнится от них. Ей, возможно, в этот момент не нужны разговоры: она физически валится с ног от быта и мечтает услышать простые слова: «Я на завтра вызвал клининг, дома всё помоют без тебя. А мы вечером с детьми ужинать пойдем в кафе, я просто хочу, чтобы ты отдохнула».
+                        <p class="text-gray-200 text-sm">
+                            <strong class="text-white">Пример 1:</strong> Если мужу после тяжелого дня хочется тихих и долгих разговоров на кухне глаза в глаза, это не значит, что жена наполнится от них. Ей, возможно, в этот момент не нужны разговоры: она физически валится с ног от быта и мечтает услышать простые слова: «Я на завтра вызвал клининг, дома всё помоют без тебя. А мы вечером с детьми ужинать пойдем в кафе, я просто хочу, чтобы ты отдохнула».
                         </p>
                     </div>
 
                     <div class="bg-gradient-dark/50 rounded-xl p-4 border-l-2 border-amber-400">
-                        <p class="text-gray-300 text-sm">
-                            <strong class="text-sand-light">Пример 2:</strong> Мужчина может годами пахать без выходных, закрывая ипотеку и принося в дом достаток, искренне веря, что в этом и есть его проявление любви. А женщина вечерами плачет в ванной, потому что ей не нужны новые вещи, ей жизненно необходимо, чтобы он просто пришел вовремя и молча обнял ее, как это было в самом начале отношений.
+                        <p class="text-gray-200 text-sm">
+                            <strong class="text-white">Пример 2:</strong> Мужчина может годами пахать без выходных, закрывая ипотеку и принося в дом достаток, искренне веря, что в этом и есть его проявление любви. А женщина вечерами плачет в ванной, потому что ей не нужны новые вещи, ей жизненно необходимо, чтобы он просто пришел вовремя и молча обнял ее, как это было в самом начале отношений.
                         </p>
                     </div>
 
                     <div class="bg-gradient-dark/50 rounded-xl p-4 border-l-2 border-amber-400">
-                        <p class="text-gray-300 text-sm">
-                            <strong class="text-sand-light">Пример 3:</strong> А бывает наоборот: женщина намывает дом до блеска, готовит праздничный ужин и ждет ласки, а мужчине для счастья не нужен идеальный порядок, ему важно услышать за этим столом простое признание: «Ты у меня такой молодец, спасибо за всё, что ты делаешь для нашей семьи. Я горжусь тобой».
+                        <p class="text-gray-200 text-sm">
+                            <strong class="text-white">Пример 3:</strong> А бывает наоборот: женщина намывает дом до блеска, готовит праздничный ужин и ждет ласки, а мужчине для счастья не нужен идеальный порядок, ему важно услышать за этим столом простое признание: «Ты у меня такой молодец, спасибо за всё, что ты делаешь для нашей семьи. Я горжусь тобой».
                         </p>
                     </div>
                 </div>
 
-                <p class="text-gray-300 mb-6 leading-relaxed">
+                <p class="text-gray-200 mb-6 leading-relaxed">
                     Они оба отдают все свои силы, но пытаются напоить друг друга тем напитком, который другому не утолит жажду.
                 </p>
 
-                <p class="text-sand-light font-semibold leading-relaxed">
+                <p class="text-white font-semibold leading-relaxed">
                     Как только вы берете в руки карту 5 базовых потребностей, взаимная холодность растворяется. Вы начинаете точно видеть, какое простое слово, прикосновение или действие возвращает в сердце вашего близкого человека долгожданный покой и нежность.
                 </p>
             </div>
@@ -626,7 +630,7 @@
                         <div class="flex items-start gap-4 text-left">
                             <div class="emoji-badge">☕</div>
                             <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-sand-light">Внимание и осознанное присутствие</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">Внимание и осознанное присутствие</h3>
                                 <p class="text-gray-400 text-sm mt-1">Время без спешки и телефонов, знаки памяти, искренние подарки со смыслом, контакт глаза в глаза</p>
                             </div>
                         </div>
@@ -636,15 +640,15 @@
                         <div class="bg-gradient-dark/50 rounded-xl p-4 space-y-4">
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">📌 Возможный детский дефицит:</p>
-                                <p class="text-gray-300 text-sm">Когда родители физически присутствовали рядом, но эмоционально были недоступны. Они много работали, постоянно спешили, откупались игрушками и вещами или раздраженно отмахивались от детских разговоров. В семье часто звучали фразы: «Отойди, не мешай», «Мне сейчас некогда», «Не перебивай взрослых». Ребенок вынес бессознательный вывод: «Я никому не важен, меня не замечают, а вещи дают вместо любви. Чтобы меня увидели, нужно либо кричать и бунтовать, либо стать невидимкой». Во взрослой жизни такие люди не верят формальным фразам: для них любовь измеряется тем, готовы ли вы подарить им свое неделимое время.</p>
+                                <p class="text-gray-200 text-sm">Когда родители физически присутствовали рядом, но эмоционально были недоступны. Они много работали, постоянно спешили, откупались игрушками и вещами или раздраженно отмахивались от детских разговоров. В семье часто звучали фразы: «Отойди, не мешай», «Мне сейчас некогда», «Не перебивай взрослых». Ребенок вынес бессознательный вывод: «Я никому не важен, меня не замечают, а вещи дают вместо любви. Чтобы меня увидели, нужно либо кричать и бунтовать, либо стать невидимкой». Во взрослой жизни такие люди не верят формальным фразам: для них любовь измеряется тем, готовы ли вы подарить им свое неделимое время.</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">🔇 Что приводит к холодности:</p>
-                                <p class="text-gray-300 text-sm">Разговоры на бегу через плечо, привычка сидеть в телефоне во время диалога, отсутствие интереса к внутреннему миру и мечтам партнера. Дорогие, но дежурные подарки без души, купленные с посылом «я откупился, теперь не трогай меня».</p>
+                                <p class="text-gray-200 text-sm">Разговоры на бегу через плечо, привычка сидеть в телефоне во время диалога, отсутствие интереса к внутреннему миру и мечтам партнера. Дорогие, но дежурные подарки без души, купленные с посылом «я откупился, теперь не трогай меня».</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">✨ Что насыщает:</p>
-                                <p class="text-gray-300 text-sm">Осознанное присутствие здесь и сейчас. Практика «Чистые 15 минут»: отложить телефон экраном вниз, сесть напротив, посмотреть в глаза и искренне выслушать, как прошел день. Спонтанные знаки памяти — любимый кофе, привезенный просто так, или открытка со словами: «Я увидел это на улице, вспомнил о тебе и захотел порадовать». Человеку жизненно важно слышать посыл: «Сейчас весь мир подождет, я только с тобой».</p>
+                                <p class="text-gray-200 text-sm">Осознанное присутствие здесь и сейчас. Практика «Чистые 15 минут»: отложить телефон экраном вниз, сесть напротив, посмотреть в глаза и искренне выслушать, как прошел день. Спонтанные знаки памяти — любимый кофе, привезенный просто так, или открытка со словами: «Я увидел это на улице, вспомнил о тебе и захотел порадовать». Человеку жизненно важно слышать посыл: «Сейчас весь мир подождет, я только с тобой».</p>
                             </div>
                         </div>
                     </div>
@@ -656,7 +660,7 @@
                         <div class="flex items-start gap-4 text-left">
                             <div class="emoji-badge">🥣</div>
                             <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-sand-light">Забота действием и помощь</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">Забота действием и помощь</h3>
                                 <p class="text-gray-400 text-sm mt-1">Конкретная помощь в быту, разгрузка, решение проблем, поступки</p>
                             </div>
                         </div>
@@ -666,15 +670,15 @@
                         <div class="bg-gradient-dark/50 rounded-xl p-4 space-y-4">
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">📌 Возможный детский дефицит:</p>
-                                <p class="text-gray-300 text-sm">Когда ребенок очень рано остался один на один со взрослой ответственностью. Ему приходилось в одиночку тянуть быт, заботиться о младших или спасать эмоционально незрелых родителей. Было много пустых обещаний, за которыми не стояло реальной помощи. Вывод: «Слова ничего не стоят. Если я сам не сделаю, никто не поможет, я надорвусь в одиночестве, но сделаю сам - помощи просить нет смысла!».</p>
+                                <p class="text-gray-200 text-sm">Когда ребенок очень рано остался один на один со взрослой ответственностью. Ему приходилось в одиночку тянуть быт, заботиться о младших или спасать эмоционально незрелых родителей. Было много пустых обещаний, за которыми не стояло реальной помощи. Вывод: «Слова ничего не стоят. Если я сам не сделаю, никто не поможет, я надорвусь в одиночестве, но сделаю сам - помощи просить нет смысла!».</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">🔇 Что приводит к холодности:</p>
-                                <p class="text-gray-300 text-sm">Пустые разговоры о любви, когда человек физически падает от усталости. Обещания починить/убрать, которые висят месяцами. Ожидание, что уставший партнер обслужит всех и накроет на стол после тяжелого дня.</p>
+                                <p class="text-gray-200 text-sm">Пустые разговоры о любви, когда человек физически падает от усталости. Обещания починить/убрать, которые висят месяцами. Ожидание, что уставший партнер обслужит всех и накроет на стол после тяжелого дня.</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">✨ Что насыщает:</p>
-                                <p class="text-gray-300 text-sm">Молчаливая помощь руками без просьб и напоминаний. Забрать детей, помыть посуду, вызвать клининг, приготовить ужин и сказать: «Сядь, выдохни, я все сделаю сам, просто отдохни». Для него реальный поступок - это главный эквивалент проявления любви.</p>
+                                <p class="text-gray-200 text-sm">Молчаливая помощь руками без просьб и напоминаний. Забрать детей, помыть посуду, вызвать клининг, приготовить ужин и сказать: «Сядь, выдохни, я все сделаю сам, просто отдохни». Для него реальный поступок - это главный эквивалент проявления любви.</p>
                             </div>
                         </div>
                     </div>
@@ -686,7 +690,7 @@
                         <div class="flex items-start gap-4 text-left">
                             <div class="emoji-badge">🏆</div>
                             <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-sand-light">Признание и одобрение</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">Признание и одобрение</h3>
                                 <p class="text-gray-400 text-sm mt-1">Похвала, слова ценности, подтверждение значимости, уважение статуса</p>
                             </div>
                         </div>
@@ -696,15 +700,15 @@
                         <div class="bg-gradient-dark/50 rounded-xl p-4 space-y-4">
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">📌 Возможный детский дефицит:</p>
-                                <p class="text-gray-300 text-sm">Когда ребенка любили условно, только за достижения и пользу. Если принес пятерку, ты молодец, если ошибся, то холод и критика. Дома редко говорили теплые слова, считая похвалу баловством. Ребенок вынес установку: «Сам по себе я не нужен, меня замечают и ценят только тогда, когда я идеален, полезен и заслужил любовь делами».</p>
+                                <p class="text-gray-200 text-sm">Когда ребенка любили условно, только за достижения и пользу. Если принес пятерку, ты молодец, если ошибся, то холод и критика. Дома редко говорили теплые слова, считая похвалу баловством. Ребенок вынес установку: «Сам по себе я не нужен, меня замечают и ценят только тогда, когда я идеален, полезен и заслужил любовь делами».</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">🔇 Что приводит к холодности:</p>
-                                <p class="text-gray-300 text-sm">Критика при посторонних, обесценивание вклада («мог бы и лучше сделать»), сравнение с другими («а вот сосед больше зарабатывает»), привычка принимать заботу как должное без простого «спасибо».</p>
+                                <p class="text-gray-200 text-sm">Критика при посторонних, обесценивание вклада («мог бы и лучше сделать»), сравнение с другими («а вот сосед больше зарабатывает»), привычка принимать заботу как должное без простого «спасибо».</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">✨ Что насыщает:</p>
-                                <p class="text-gray-300 text-sm">Искренние слова уважения и гордости за его труд. Замечать не только глобальные победы, но и ежедневные бытовые усилия. Фразы, возвращающие человеку крылья: «Я горжусь тобой, ты моя опора, спасибо за всё, что ты делаешь для нас, я это замечаю».</p>
+                                <p class="text-gray-200 text-sm">Искренние слова уважения и гордости за его труд. Замечать не только глобальные победы, но и ежедневные бытовые усилия. Фразы, возвращающие человеку крылья: «Я горжусь тобой, ты моя опора, спасибо за всё, что ты делаешь для нас, я это замечаю».</p>
                             </div>
                         </div>
                     </div>
@@ -716,7 +720,7 @@
                         <div class="flex items-start gap-4 text-left">
                             <div class="emoji-badge">⚓</div>
                             <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-sand-light">Безопасность и опора</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">Безопасность и опора</h3>
                                 <p class="text-gray-400 text-sm mt-1">Предсказуемость, понятные договоренности, финансовая и эмоциональная стабильность, доверие</p>
                             </div>
                         </div>
@@ -726,15 +730,15 @@
                         <div class="bg-gradient-dark/50 rounded-xl p-4 space-y-4">
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">📌 Возможный детский дефицит:</p>
-                                <p class="text-gray-300 text-sm">Когда вокруг ребенка было много хаоса, эмоциональных качелей или бытовой нестабильности. Родители могли ссориться, внезапно срываться, жить от кризиса к кризису или сегодня хвалить за то, за что вчера ругали. Возможно, часто звучали фразы: «Мы не знаем, что будет завтра», «Из-за тебя у нас вечно проблемы». Ребенок сделал вывод: «Мир ненадежен, расслабляться нельзя, в любую секунду все может рухнуть, если я все не проконтролирую».</p>
+                                <p class="text-gray-200 text-sm">Когда вокруг ребенка было много хаоса, эмоциональных качелей или бытовой нестабильности. Родители могли ссориться, внезапно срываться, жить от кризиса к кризису или сегодня хвалить за то, за что вчера ругали. Возможно, часто звучали фразы: «Мы не знаем, что будет завтра», «Из-за тебя у нас вечно проблемы». Ребенок сделал вывод: «Мир ненадежен, расслабляться нельзя, в любую секунду все может рухнуть, если я все не проконтролирую».</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">🔇 Что приводит к холодности:</p>
-                                <p class="text-gray-300 text-sm">Резкая отмена планов в последний момент со словами «там видно будет», скрытые траты, опоздания без предупреждения, эмоциональные вспышки и насмешки над его тревожностью («вечно ты все усложняешь и занудствуешь»).</p>
+                                <p class="text-gray-200 text-sm">Резкая отмена планов в последний момент со словами «там видно будет», скрытые траты, опоздания без предупреждения, эмоциональные вспышки и насмешки над его тревожностью («вечно ты все усложняешь и занудствуешь»).</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">✨ Что насыщает:</p>
-                                <p class="text-gray-300 text-sm">Соблюдение договоренностей даже в мелочах. Совместное спокойное планирование бюджета и выходных, предупреждение о любых задержках коротким сообщением. Чувство предсказуемости: «Я рядом, я держу слово, земля под нашими ногами твердая».</p>
+                                <p class="text-gray-200 text-sm">Соблюдение договоренностей даже в мелочах. Совместное спокойное планирование бюджета и выходных, предупреждение о любых задержках коротким сообщением. Чувство предсказуемости: «Я рядом, я держу слово, земля под нашими ногами твердая».</p>
                             </div>
                         </div>
                     </div>
@@ -746,7 +750,7 @@
                         <div class="flex items-start gap-4 text-left">
                             <div class="emoji-badge">🫂</div>
                             <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-sand-light">Телесный контакт и тепло</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">Телесный контакт и тепло</h3>
                                 <p class="text-gray-400 text-sm mt-1">Объятия, прикосновения, снятие мышечного панциря, нежность, близость</p>
                             </div>
                         </div>
@@ -756,15 +760,15 @@
                         <div class="bg-gradient-dark/50 rounded-xl p-4 space-y-4">
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">📌 Возможный детский дефицит:</p>
-                                <p class="text-gray-300 text-sm">Тактильно холодная семья, где не было принято обнимать, гладить по голове или сажать на колени. Телесный контакт происходил только через наказания или во время болезни. Возможно ребенок сталкивался с бойкотом и ледяным отвержением (когда за проступок с ним не разговаривали и не подпускали к себе). Вывод: «Если ко мне не прикасаются, значит, меня отвергли и я невидимка».</p>
+                                <p class="text-gray-200 text-sm">Тактильно холодная семья, где не было принято обнимать, гладить по голове или сажать на колени. Телесный контакт происходил только через наказания или во время болезни. Возможно ребенок сталкивался с бойкотом и ледяным отвержением (когда за проступок с ним не разговаривали и не подпускали к себе). Вывод: «Если ко мне не прикасаются, значит, меня отвергли и я невидимка».</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">🔇 Что приводит к холодности:</p>
-                                <p class="text-gray-300 text-sm">Физическое отстранение, сон на разных краях кровати, отталкивание при попытке прижаться, наказание молчанием и дистанцией. Для такого человека физический холод партнера равен смертельному страху отвержения.</p>
+                                <p class="text-gray-200 text-sm">Физическое отстранение, сон на разных краях кровати, отталкивание при попытке прижаться, наказание молчанием и дистанцией. Для такого человека физический холод партнера равен смертельному страху отвержения.</p>
                             </div>
                             <div>
                                 <p class="text-amber-400 font-semibold text-sm mb-2">✨ Что насыщает:</p>
-                                <p class="text-gray-300 text-sm">Теплые объятия без сексуального подтекста при встрече и перед сном. Взять за руку на прогулке, погладить по спине, положить руку на плечо, когда тяжело. Простое физическое присутствие тело к телу, после которого нервная система мгновенно выдыхает. Возможность раскрепоститься во время секса и пробовать то, что хочется.</p>
+                                <p class="text-gray-200 text-sm">Теплые объятия без сексуального подтекста при встрече и перед сном. Взять за руку на прогулке, погладить по спине, положить руку на плечо, когда тяжело. Простое физическое присутствие тело к телу, после которого нервная система мгновенно выдыхает. Возможность раскрепоститься во время секса и пробовать то, что хочется.</p>
                             </div>
                         </div>
                     </div>
@@ -776,7 +780,7 @@
     <!-- МИРОВОЙ ОПЫТ И КЕЙСЫ -->
     <section id="cases" class="py-20 px-4 bg-gradient-dark/50">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-8 text-sand-light">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-8 text-white">
                 Мировой опыт и кейсы
             </h2>
 
@@ -785,10 +789,10 @@
                 <p class="text-5xl md:text-6xl font-bold gradient-text mb-4">
                     <span class="text-gold-muted">БОЛЕЕ 20 миллионов</span>
                 </p>
-                <p class="text-xl md:text-2xl text-gray-300 mb-6">
+                <p class="text-xl md:text-2xl text-gray-200 mb-6">
                     семей по всему миру восстановили близость и спасили семейные отношения.
                 </p>
-                <p class="text-gray-300">
+                <p class="text-gray-200">
                     Практикум адаптирован для российских семей с учетом культурных особенностей и современных вызовов.
                 </p>
             </div>
@@ -798,14 +802,14 @@
                 <!-- Кейс 1 -->
                 <div class="case-card glass rounded-2xl p-8 shadow-soft">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-full bg-amber-600/30 flex items-center justify-center text-2xl">👩‍❤️‍👨</div>
+                        <div class="w-12 h-12 rounded-full bg-amber-600/30 flex items-center justify-center text-2xl">◇‍❤️‍◆</div>
                         <div>
-                            <h3 class="text-xl font-bold text-sand-light">Анна и Дмитрий</h3>
+                            <h3 class="text-xl font-bold text-white">Анна и Дмитрий</h3>
                             <p class="text-gray-400 text-sm">12 лет в браке</p>
                         </div>
                     </div>
 
-                    <div class="space-y-4 mb-6 text-sm text-gray-300">
+                    <div class="space-y-4 mb-6 text-sm text-gray-200">
                         <div>
                             <p class="text-amber-400 font-semibold mb-2">❌ Тупик:</p>
                             <p>Три года спали в разных комнатах, разговаривали только о детях и счетах. Дмитрий молча утыкался в телевизор, Анна чувствовала себя заброшенной.</p>
@@ -820,9 +824,9 @@
                         </div>
                     </div>
 
-                    <div class="pt-6 border-t border-amber-600/20">
+                    <div class="pt-6 border-t border-amber-500/20">
                         <p class="text-gold-muted font-bold text-sm">✨ Результат</p>
-                        <p class="text-sand-light font-semibold mt-2">Через неделю вернулись в общую спальню. Ледяное молчание ушло. Каждый вечер разговаривают на кухне, как в первые годы знакомства.</p>
+                        <p class="text-white font-semibold mt-2">Через неделю вернулись в общую спальню. Ледяное молчание ушло. Каждый вечер разговаривают на кухне, как в первые годы знакомства.</p>
                     </div>
                 </div>
 
@@ -831,12 +835,12 @@
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-12 h-12 rounded-full bg-terracotta/30 flex items-center justify-center text-2xl">💑</div>
                         <div>
-                            <h3 class="text-xl font-bold text-sand-light">Елена и Михаил</h3>
+                            <h3 class="text-xl font-bold text-white">Елена и Михаил</h3>
                             <p class="text-gray-400 text-sm">8 лет в браке</p>
                         </div>
                     </div>
 
-                    <div class="space-y-4 mb-6 text-sm text-gray-300">
+                    <div class="space-y-4 mb-6 text-sm text-gray-200">
                         <div>
                             <p class="text-amber-400 font-semibold mb-2">❌ Тупик:</p>
                             <p>Бесконечные скандалы из-за спонтанных трат. Михаил любил покупать, Елена встречала это истериками о подушке безопасности. Он чувствовал себя виноватым и уезжал к друзьям, она оставалась в слезах.</p>
@@ -851,9 +855,9 @@
                         </div>
                     </div>
 
-                    <div class="pt-6 border-t border-amber-600/20">
+                    <div class="pt-6 border-t border-amber-500/20">
                         <p class="text-gold-muted font-bold text-sm">✨ Результат</p>
-                        <p class="text-sand-light font-semibold mt-2">За три недели скандалы прекратились. Они научились договариваться на берегу и вернули в семью покой и чувство партнерства.</p>
+                        <p class="text-white font-semibold mt-2">За три недели скандалы прекратились. Они научились договариваться на берегу и вернули в семью покой и чувство партнерства.</p>
                     </div>
                 </div>
             </div>
@@ -863,84 +867,84 @@
     <!-- ЧТО ВХОДИТ В ПРАКТИКУМ -->
     <section id="contents" class="py-20 px-4">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-sand-light">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-white">
                 Что входит в практикум
             </h2>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <!-- Модуль 1 -->
                 <div class="glass rounded-2xl p-6 text-center card-hover">
-                    <div class="text-4xl mb-4">📋</div>
-                    <h3 class="text-lg font-bold text-sand-light mb-3">Экспресс-тест</h3>
+                    <div class="text-4xl mb-4">◇</div>
+                    <h3 class="text-lg font-bold text-white mb-3">Экспресс-тест</h3>
                     <p class="text-gray-400 text-sm">Для себя и партнера (даже по методу наблюдения)</p>
                 </div>
 
                 <!-- Модуль 2 -->
                 <div class="glass rounded-2xl p-6 text-center card-hover">
                     <div class="text-4xl mb-4">📚</div>
-                    <h3 class="text-lg font-bold text-sand-light mb-3">Иллюстрированный атлас</h3>
+                    <h3 class="text-lg font-bold text-white mb-3">Иллюстрированный атлас</h3>
                     <p class="text-gray-400 text-sm">Фразы и стоп-слова для каждой потребности</p>
                 </div>
 
                 <!-- Модуль 3 -->
                 <div class="glass rounded-2xl p-6 text-center card-hover">
                     <div class="text-4xl mb-4">🔄</div>
-                    <h3 class="text-lg font-bold text-sand-light mb-3">Переводчик</h3>
+                    <h3 class="text-lg font-bold text-white mb-3">Переводчик</h3>
                     <p class="text-gray-400 text-sm">Семейных ссор за 60 секунд</p>
                 </div>
 
                 <!-- Модуль 4 -->
                 <div class="glass rounded-2xl p-6 text-center card-hover">
                     <div class="text-4xl mb-4">🕯️</div>
-                    <h3 class="text-lg font-bold text-sand-light mb-3">Перемирие</h3>
+                    <h3 class="text-lg font-bold text-white mb-3">Перемирие</h3>
                     <p class="text-gray-400 text-sm">7 дней вечерних шагов по 10 минут</p>
                 </div>
 
                 <!-- Модуль 5 -->
                 <div class="glass rounded-2xl p-6 text-center card-hover">
                     <div class="text-4xl mb-4">🎁</div>
-                    <h3 class="text-lg font-bold text-sand-light mb-3">Бонус-модуль</h3>
+                    <h3 class="text-lg font-bold text-white mb-3">Бонус-модуль</h3>
                     <p class="text-gray-400 text-sm">Для детей и пожилых родителей</p>
                 </div>
             </div>
 
             <!-- Подробно о каждом -->
             <div class="mt-16 glass rounded-3xl p-8 md:p-12">
-                <h3 class="text-2xl font-bold text-sand-light mb-8">Каждый модуль — это инструмент</h3>
+                <h3 class="text-2xl font-bold text-white mb-8">Каждый модуль — это инструмент</h3>
                 <div class="space-y-6">
                     <div class="flex gap-4">
                         <div class="text-3xl flex-shrink-0 emoji-number">1️⃣</div>
                         <div>
-                            <h4 class="font-bold text-sand-light mb-2">Экспресс-тест: узнайте язык друг друга</h4>
-                            <p class="text-gray-300">Этот тест показывает, какая потребность доминирует. Можно пройти вместе или каждому отдельно.</p>
+                            <h4 class="font-bold text-white mb-2">Экспресс-тест: узнайте язык друг друга</h4>
+                            <p class="text-gray-200">Этот тест показывает, какая потребность доминирует. Можно пройти вместе или каждому отдельно.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="text-3xl flex-shrink-0 emoji-number">2️⃣</div>
                         <div>
-                            <h4 class="font-bold text-sand-light mb-2">Атлас фраз: выучите язык любви</h4>
-                            <p class="text-gray-300">На каждый день недели — 3–4 фразы, которые точно сработают. С объяснением, почему именно эта фраза гасит конфликт.</p>
+                            <h4 class="font-bold text-white mb-2">Атлас фраз: выучите язык любви</h4>
+                            <p class="text-gray-200">На каждый день недели — 3–4 фразы, которые точно сработают. С объяснением, почему именно эта фраза гасит конфликт.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="text-3xl flex-shrink-0 emoji-number">3️⃣</div>
                         <div>
-                            <h4 class="font-bold text-sand-light mb-2">Переводчик: понимайте реальную боль</h4>
-                            <p class="text-gray-300">«Ты меня не слушаешь» = мне не хватает Внимания. «Ты ничего не делаешь» = мне нужна Забота действием.</p>
+                            <h4 class="font-bold text-white mb-2">Переводчик: понимайте реальную боль</h4>
+                            <p class="text-gray-200">«Ты меня не слушаешь» = мне не хватает Внимания. «Ты ничего не делаешь» = мне нужна Забота действием.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="text-3xl flex-shrink-0 emoji-number">4️⃣</div>
                         <div>
-                            <h4 class="font-bold text-sand-light mb-2">Протокол перемирия: 7 дней изменений</h4>
-                            <p class="text-gray-300">Каждый вечер (10 минут) — точный шаг, который вызывает сдвиг. За неделю вы вернётесь к разговорам.</p>
+                            <h4 class="font-bold text-white mb-2">Протокол перемирия: 7 дней изменений</h4>
+                            <p class="text-gray-200">Каждый вечер (10 минут) — точный шаг, который вызывает сдвиг. За неделю вы вернётесь к разговорам.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="text-3xl flex-shrink-0 emoji-number">5️⃣</div>
                         <div>
-                            <h4 class="font-bold text-sand-light mb-2">Бонус: как говорить с детьми и родителями</h4>
-                            <p class="text-gray-300">5 базовых потребностей работают и с подростками, и с пожилыми родителями. Специальный модуль для семьи.</p>
+                            <h4 class="font-bold text-white mb-2">Бонус: как говорить с детьми и родителями</h4>
+                            <p class="text-gray-200">5 базовых потребностей работают и с подростками, и с пожилыми родителями. Специальный модуль для семьи.</p>
                         </div>
                     </div>
                 </div>
@@ -955,37 +959,37 @@
                 <div class="flex items-center gap-3 mb-6">
                     <div class="text-5xl">🎁</div>
                     <div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-sand-light">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white">
                             Персональный аудио-аудит вашей пары
                         </h2>
-                        <p class="text-amber-300 font-semibold">От автора • БЕСПЛАТНО для первых 15 участников</p>
+                        <p class="text-amber-400 font-semibold">От автора • БЕСПЛАТНО для первых 15 участников</p>
                     </div>
                 </div>
 
-                <div class="status-badge bg-amber-900/40 border-amber-600/60 mb-6 block">
-                    ⏳ Осталось <span class="counter-text">4</span> мест из 15
+                <div class="status-badge bg-gray-900/40 border-amber-500/60 mb-6 block">
+                    ★ Осталось <span class="counter-text">4</span> мест из 15
                 </div>
 
-                <p class="text-lg text-gray-300 mb-6">
+                <p class="text-lg text-gray-200 mb-6">
                     После того как вы пройдёте практикум и выполните тесты, Егор Пырихов лично разберёт вашу ситуацию в голосовом формате:
                 </p>
 
                 <ul class="space-y-4 mb-8">
                     <li class="flex gap-4 items-start">
                         <span class="text-amber-400 flex-shrink-0">✦</span>
-                        <span class="text-gray-300"><strong>12–15 минут</strong> цельного разбора по вашим конкретным тестам</span>
+                        <span class="text-gray-200"><strong>12–15 минут</strong> цельного разбора по вашим конкретным тестам</span>
                     </li>
                     <li class="flex gap-4 items-start">
                         <span class="text-amber-400 flex-shrink-0">✦</span>
-                        <span class="text-gray-300">Никаких долгих созвонов и стресса — всё в голосовом формате</span>
+                        <span class="text-gray-200">Никаких долгих созвонов и стресса — всё в голосовом формате</span>
                     </li>
                     <li class="flex gap-4 items-start">
                         <span class="text-amber-400 flex-shrink-0">✦</span>
-                        <span class="text-gray-300">Персональные рекомендации именно для вашей пары</span>
+                        <span class="text-gray-200">Персональные рекомендации именно для вашей пары</span>
                     </li>
                     <li class="flex gap-4 items-start">
                         <span class="text-amber-400 flex-shrink-0">✦</span>
-                        <span class="text-gray-300">Точки применения каждого модуля именно в вашей ситуации</span>
+                        <span class="text-gray-200">Точки применения каждого модуля именно в вашей ситуации</span>
                     </li>
                 </ul>
 
@@ -999,7 +1003,7 @@
     <!-- ЦЕНОВЫЕ ОКНА И ОПЛАТА -->
     <section id="pricing" class="py-20 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 text-sand-light">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 text-white">
                 Инвестиция в ваш дом
             </h2>
             <p class="text-center text-gray-400 mb-12">
@@ -1008,7 +1012,7 @@
 
             <!-- Основной тариф -->
             <div class="glass rounded-3xl p-8 md:p-12 shadow-glow border-t-4 border-gold-muted mb-8">
-                <h3 class="text-3xl md:text-4xl font-bold text-sand-light mb-4">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">
                     Полный доступ навсегда
                 </h3>
                 <p class="text-gray-400 mb-6">Включает все 5 модулей + бонус-модуль + персональный аудио-аудит</p>
@@ -1023,19 +1027,19 @@
                 <div class="space-y-4 mb-8">
                     <div class="flex gap-3 items-start">
                         <span class="text-amber-400 text-xl flex-shrink-0">✓</span>
-                        <span class="text-gray-300">5 полноценных модулей на все случаи жизни</span>
+                        <span class="text-gray-200">5 полноценных модулей на все случаи жизни</span>
                     </div>
                     <div class="flex gap-3 items-start">
                         <span class="text-amber-400 text-xl flex-shrink-0">✓</span>
-                        <span class="text-gray-300">Персональный аудио-аудит от автора (12–15 мин)</span>
+                        <span class="text-gray-200">Персональный аудио-аудит от автора (12–15 мин)</span>
                     </div>
                     <div class="flex gap-3 items-start">
                         <span class="text-amber-400 text-xl flex-shrink-0">✓</span>
-                        <span class="text-gray-300">Доступ навсегда, обновления бесплатно</span>
+                        <span class="text-gray-200">Доступ навсегда, обновления бесплатно</span>
                     </div>
                     <div class="flex gap-3 items-start">
                         <span class="text-amber-400 text-xl flex-shrink-0">✓</span>
-                        <span class="text-gray-300">Можно пройти с партнёром или одному</span>
+                        <span class="text-gray-200">Можно пройти с партнёром или одному</span>
                     </div>
                 </div>
 
@@ -1045,7 +1049,7 @@
                         💳 Полный доступ за 15 000 Р
                     </a>
                     <a href="https://t.me/igor_dubovitskii?&text=Хочу_тест_5_Базовых_Потребностей" target="_blank" class="btn-secondary text-center text-lg py-4">
-                        📋 Пройти тест и получить рекомендации 2 000 Р
+                        ◇ Пройти тест и получить рекомендации 2 000 Р
                     </a>
                 </div>
 
@@ -1055,8 +1059,8 @@
             </div>
 
             <!-- Информация о гарантии -->
-            <div class="glass rounded-2xl p-6 md:p-8 border-l-4 border-amber-600">
-                <h4 class="font-bold text-sand-light mb-3">💪 Когда вы платите, вы платите за результат</h4>
+            <div class="glass rounded-2xl p-6 md:p-8 border-l-4 border-amber-500">
+                <h4 class="font-bold text-white mb-3">💪 Когда вы платите, вы платите за результат</h4>
                 <p class="text-gray-400">
                     Если практикум не поможет в первые 14 дней, мы вернём деньги полностью. Но опыт показывает: сдвиги начинаются уже в день 3–4.
                 </p>
@@ -1067,7 +1071,7 @@
     <!-- FAQ -->
     <section id="faq" class="py-20 px-4 bg-gradient-dark/50">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-sand-light">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-white">
                 Частые вопросы
             </h2>
 
@@ -1075,11 +1079,11 @@
                 <!-- FAQ 1 -->
                 <div class="accordion-item glass rounded-2xl overflow-hidden shadow-soft">
                     <button class="w-full px-6 py-5 md:py-6 flex items-start justify-between hover:bg-white/5 transition-colors" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-xl font-bold text-sand-light text-left">Что делать, если партнер отказывается проходить тест?</h3>
+                        <h3 class="text-lg md:text-xl font-bold text-white text-left">Что делать, если партнер отказывается проходить тест?</h3>
                         <span class="text-amber-400 text-2xl flex-shrink-0 transition-transform">›</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-300">
+                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-200">
                             <p className="mb-3">
                                 Отличный вопрос — это самый частый страх. Ответ: не нужно давить. Метод предусматривает технику скрытого наблюдения.
                             </p>
@@ -1096,11 +1100,11 @@
                 <!-- FAQ 2 -->
                 <div class="accordion-item glass rounded-2xl overflow-hidden shadow-soft">
                     <button class="w-full px-6 py-5 md:py-6 flex items-start justify-between hover:bg-white/5 transition-colors" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-xl font-bold text-sand-light text-left">А если мы 10 лет живём как чужие и накопилось слишком много обид?</h3>
+                        <h3 class="text-lg md:text-xl font-bold text-white text-left">А если мы 10 лет живём как чужие и накопилось слишком много обид?</h3>
                         <span class="text-amber-400 text-2xl flex-shrink-0 transition-transform">›</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-300">
+                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-200">
                             <p className="mb-3">
                                 Именно в таких случаях практикум работает быстрее всего. Почему? Потому что вы наконец-то поймете, о ЧЕМ вы оба молчали.
                             </p>
@@ -1120,11 +1124,11 @@
                 <!-- FAQ 3 -->
                 <div class="accordion-item glass rounded-2xl overflow-hidden shadow-soft">
                     <button class="w-full px-6 py-5 md:py-6 flex items-start justify-between hover:bg-white/5 transition-colors" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-xl font-bold text-sand-light text-left">Как устроен аудио-аудит?</h3>
+                        <h3 class="text-lg md:text-xl font-bold text-white text-left">Как устроен аудио-аудит?</h3>
                         <span class="text-amber-400 text-2xl flex-shrink-0 transition-transform">›</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-300">
+                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-200">
                             <p className="mb-3">
                                 <strong>Вы проходите практикум, делаете тесты, заполняете бланк о вашей ситуации.</strong>
                             </p>
@@ -1150,11 +1154,11 @@
                 <!-- FAQ 4 -->
                 <div class="accordion-item glass rounded-2xl overflow-hidden shadow-soft">
                     <button class="w-full px-6 py-5 md:py-6 flex items-start justify-between hover:bg-white/5 transition-colors" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-xl font-bold text-sand-light text-left">Сколько времени занимает практикум?</h3>
+                        <h3 class="text-lg md:text-xl font-bold text-white text-left">Сколько времени занимает практикум?</h3>
                         <span class="text-amber-400 text-2xl flex-shrink-0 transition-transform">›</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-300">
+                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-200">
                             <p className="mb-3">
                                 <strong>На изучение всех модулей: 3–4 часа максимум.</strong>
                             </p>
@@ -1174,11 +1178,11 @@
                 <!-- FAQ 5 -->
                 <div class="accordion-item glass rounded-2xl overflow-hidden shadow-soft">
                     <button class="w-full px-6 py-5 md:py-6 flex items-start justify-between hover:bg-white/5 transition-colors" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-xl font-bold text-sand-light text-left">Это работает для любых отношений? Вдовцы, новые пары, сожители?</h3>
+                        <h3 class="text-lg md:text-xl font-bold text-white text-left">Это работает для любых отношений? Вдовцы, новые пары, сожители?</h3>
                         <span class="text-amber-400 text-2xl flex-shrink-0 transition-transform">›</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-300">
+                        <div class="bg-gradient-dark/50 rounded-xl p-4 text-gray-200">
                             <p className="mb-3">
                                 Да, работает. 5 базовых потребностей — это не про брак, это про человеческую природу.
                             </p>
@@ -1198,7 +1202,7 @@
     <!-- FOOTER -->
     <footer class="py-12 px-4 border-t border-amber-900/20">
         <div class="max-w-5xl mx-auto text-center">
-            <p class="text-gray-300 mb-4 text-sm md:text-base">
+            <p class="text-gray-200 mb-4 text-sm md:text-base">
                 © 2026 ЭКСПЕДИЦИЯ ВНУТРЬ СЕБЯ •<br class="md:hidden">
                 <span class="hidden md:inline">•</span> Пять Базовых Потребностей
             </p>
